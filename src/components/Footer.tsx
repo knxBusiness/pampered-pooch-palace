@@ -1,59 +1,40 @@
-
 import { Heart, MapPin, Phone, Mail, Instagram, Facebook, Twitter } from 'lucide-react';
-
 const Footer = () => {
-  const quickLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Gallery', href: '#gallery' },
-    { name: 'Contact', href: '#contact' },
-  ];
-
-  const services = [
-    'Royal Full Service',
-    'Signature Styling',
-    'Luxury Spa Package',
-    'Express Refresh',
-    'Puppy First Timer',
-    'Senior Pet Care',
-  ];
-
-  return (
-    <footer className="bg-luxury-navy text-white">
+  const quickLinks = [{
+    name: 'Home',
+    href: '#home'
+  }, {
+    name: 'Services',
+    href: '#services'
+  }, {
+    name: 'About Us',
+    href: '#about'
+  }, {
+    name: 'Gallery',
+    href: '#gallery'
+  }, {
+    name: 'Contact',
+    href: '#contact'
+  }];
+  const services = ['Royal Full Service', 'Signature Styling', 'Luxury Spa Package', 'Express Refresh', 'Puppy First Timer', 'Senior Pet Care'];
+  return <footer className="bg-luxury-navy text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-1">
-            <h3 className="text-2xl font-playfair font-bold text-luxury-gold mb-4">
-              Luxe Paws
-            </h3>
+            <h3 className="text-2xl font-playfair font-bold text-luxury-gold mb-4">Wizard Of Paws</h3>
             <p className="text-white/80 mb-6 leading-relaxed">
               Premium dog grooming and spa services designed for the discerning pet owner. Where luxury meets compassionate care.
             </p>
             <div className="flex space-x-4">
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-luxury-gold/20 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors duration-300"
-                aria-label="Follow us on Instagram"
-              >
+              <a href="#" className="w-10 h-10 bg-luxury-gold/20 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors duration-300" aria-label="Follow us on Instagram">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-luxury-gold/20 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors duration-300"
-                aria-label="Follow us on Facebook"
-              >
+              <a href="#" aria-label="Follow us on Facebook" className="w-10 h-10 bg-luxury-gold/20 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors duration-300 mx-[12px]">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-luxury-gold/20 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors duration-300"
-                aria-label="Follow us on Twitter"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
+              
             </div>
           </div>
 
@@ -61,16 +42,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-luxury-gold mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <a 
-                    href={link.href}
-                    className="text-white/80 hover:text-luxury-gold transition-colors duration-300"
-                  >
+              {quickLinks.map(link => <li key={link.name}>
+                  <a href={link.href} className="text-white/80 hover:text-luxury-gold transition-colors duration-300">
                     {link.name}
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -78,16 +54,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-luxury-gold mb-6">Our Services</h4>
             <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service}>
-                  <a 
-                    href="#services"
-                    className="text-white/80 hover:text-luxury-gold transition-colors duration-300 text-sm"
-                  >
+              {services.map(service => <li key={service}>
+                  <a href="#services" className="text-white/80 hover:text-luxury-gold transition-colors duration-300 text-sm">
                     {service}
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -98,27 +69,21 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-luxury-gold flex-shrink-0 mt-0.5" />
                 <div className="text-white/80">
-                  <div>123 Luxury Lane</div>
-                  <div>Beverly Hills, CA 90210</div>
+                  <div>366 Broadway St W,</div>
+                  <div>Yorkton, SK S3N 0N9</div>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-luxury-gold flex-shrink-0" />
-                <a 
-                  href="tel:+15551234567"
-                  className="text-white/80 hover:text-luxury-gold transition-colors duration-300"
-                >
+                <a href="tel:+15551234567" className="text-white/80 hover:text-luxury-gold transition-colors duration-300">
                   (555) 123-4567
                 </a>
               </div>
               
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-luxury-gold flex-shrink-0" />
-                <a 
-                  href="mailto:hello@luxepaws.com"
-                  className="text-white/80 hover:text-luxury-gold transition-colors duration-300"
-                >
+                <a href="mailto:hello@luxepaws.com" className="text-white/80 hover:text-luxury-gold transition-colors duration-300">
                   hello@luxepaws.com
                 </a>
               </div>
@@ -145,11 +110,7 @@ const Footer = () => {
               Subscribe to our newsletter for grooming tips, special offers, and pet care insights.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input 
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:border-luxury-gold"
-              />
+              <input type="email" placeholder="Enter your email address" className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:border-luxury-gold" />
               <button className="bg-luxury-gold hover:bg-luxury-bronze text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
                 Subscribe
               </button>
@@ -181,8 +142,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
