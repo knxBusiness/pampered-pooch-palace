@@ -40,7 +40,7 @@ const Navigation = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-luxury-navy">
               <Phone className="h-4 w-4" />
-              <span>(555) 123-4567</span>
+              <span>(306) 621-0985</span>
             </div>
             <Button className="bg-luxury-gold hover:bg-luxury-bronze text-white">
               Book Now
