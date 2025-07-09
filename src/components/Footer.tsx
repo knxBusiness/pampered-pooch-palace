@@ -119,9 +119,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="border-t border-white/20 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-white/60 text-sm">
-              © 2024 Luxe Paws. All rights reserved.
-            </div>
+            <div className="text-white/60 text-sm">© 2024 Wizard of Paws. All rights reserved.</div>
             
             <div className="flex items-center space-x-1 text-white/60 text-sm">
               <span>Made with</span>
