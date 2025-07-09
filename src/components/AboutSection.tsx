@@ -1,33 +1,24 @@
-
 import { Button } from '@/components/ui/button';
 import { Award, Users, Heart, Star, Shield, Sparkles } from 'lucide-react';
-
 const AboutSection = () => {
-  const qualities = [
-    {
-      icon: Heart,
-      title: "Animal Lovers",
-      description: "We're not just groomers — we're animal lovers, caretakers, and part of the Yorkton community."
-    },
-    {
-      icon: Shield,
-      title: "Safe & Calm",
-      description: "We specialize in creating comfortable experiences for shy, energetic, and reactive pups."
-    },
-    {
-      icon: Sparkles,
-      title: "Expert Care",
-      description: "From first-time puppy grooms to matted coats and breed-specific styles — we do it all."
-    },
-    {
-      icon: Award,
-      title: "Certified Team",
-      description: "Our groomers understand both the art and heart of grooming with 8+ years of experience."
-    }
-  ];
-
-  return (
-    <section id="about" className="py-20 bg-white">
+  const qualities = [{
+    icon: Heart,
+    title: "Animal Lovers",
+    description: "We're not just groomers — we're animal lovers, caretakers, and part of the Yorkton community."
+  }, {
+    icon: Shield,
+    title: "Safe & Calm",
+    description: "We specialize in creating comfortable experiences for shy, energetic, and reactive pups."
+  }, {
+    icon: Sparkles,
+    title: "Expert Care",
+    description: "From first-time puppy grooms to matted coats and breed-specific styles — we do it all."
+  }, {
+    icon: Award,
+    title: "Certified Team",
+    description: "Our groomers understand both the art and heart of grooming with 8+ years of experience."
+  }];
+  return <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
@@ -54,17 +45,10 @@ const AboutSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button 
-                size="lg" 
-                className="bg-luxury-gold hover:bg-luxury-bronze text-white"
-              >
+              <Button size="lg" className="bg-luxury-gold hover:bg-luxury-bronze text-white">
                 Contact Us Today
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-luxury-navy text-luxury-navy hover:bg-luxury-navy hover:text-white"
-              >
+              <Button size="lg" variant="outline" className="border-luxury-navy text-luxury-navy hover:bg-luxury-navy hover:text-white">
                 View Our Services
               </Button>
             </div>
@@ -85,23 +69,19 @@ const AboutSection = () => {
           {/* Right Content - Image */}
           <div className="relative animate-scale-in">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img 
-                src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=800&auto=format&fit=crop" 
-                alt="Professional dog grooming at Wizard of Paws" 
-                className="w-full h-96 object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=800&auto=format&fit=crop" alt="Professional dog grooming at Wizard of Paws" className="w-full h-96 object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-luxury-navy/30 to-transparent"></div>
             </div>
             
             {/* Floating Achievement Card */}
-            <div className="absolute -bottom-8 -left-8 bg-white rounded-xl p-6 shadow-2xl">
+            <div className="absolute -bottom-8 -left-8 bg-white rounded-xl p-6 shadow-2xl px-[50px]">
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-luxury-gold rounded-full flex items-center justify-center">
                   <Star className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-luxury-navy">New</div>
-                  <div className="text-sm text-luxury-navy/60">Yorkton Location</div>
+                  <div className="text-2xl font-bold text-luxury-navy">5 StarRated</div>
+                  
                 </div>
               </div>
             </div>
@@ -115,12 +95,9 @@ const AboutSection = () => {
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {qualities.map((quality, index) => (
-              <div 
-                key={quality.title}
-                className="text-center group animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+            {qualities.map((quality, index) => <div key={quality.title} className="text-center group animate-fade-in" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <div className="w-16 h-16 bg-luxury-gold/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-luxury-gold/20 transition-colors duration-300">
                   <quality.icon className="h-8 w-8 text-luxury-gold" />
                 </div>
@@ -130,13 +107,10 @@ const AboutSection = () => {
                 <p className="text-luxury-navy/60">
                   {quality.description}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
