@@ -63,7 +63,7 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-luxury-cream text-luxury-cream hover:bg-luxury-cream hover:text-luxury-navy px-8 py-4 text-lg font-semibold transform hover:scale-105 transition-all duration-300"
+              className="border-luxury-cream text-luxury-gold hover:bg-luxury-cream hover:text-luxury-navy px-8 py-4 text-lg font-semibold transform hover:scale-105 transition-all duration-300"
             >
               Call (306) 621-0985
             </Button>
