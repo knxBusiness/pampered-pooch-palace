@@ -1,6 +1,6 @@
 
 import { Button } from '@/components/ui/button';
-import { Star, Award, Heart } from 'lucide-react';
+import { Star, Award, Heart, MapPin, MessageCircle } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -20,35 +20,35 @@ const HeroSection = () => {
           {/* Premium Badge */}
           <div className="inline-flex items-center px-4 py-2 bg-luxury-gold/20 backdrop-blur-sm rounded-full mb-8">
             <Award className="h-4 w-4 text-luxury-gold mr-2" />
-            <span className="text-luxury-cream text-sm font-medium">Award-Winning Luxury Grooming</span>
+            <span className="text-luxury-cream text-sm font-medium">8+ Years of Expert Grooming</span>
           </div>
 
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-playfair font-bold text-luxury-cream mb-6 leading-tight">
-            Premium Care for Your
+            Welcome to
             <span className="block bg-gradient-to-r from-luxury-gold to-luxury-champagne bg-clip-text text-transparent">
-              Beloved Companion
+              Wizard of Paws
             </span>
           </h1>
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-luxury-cream/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Experience the pinnacle of luxury dog grooming with our expert stylists, premium products, and spa-like atmosphere designed for your pet's comfort and your peace of mind.
+            We treat your pets like family. Our certified groomers in Yorkton, Saskatchewan deliver high-quality, compassionate grooming for dogs of all sizes, breeds, and personalities.
           </p>
 
-          {/* Stats */}
+          {/* Location & New Clients Info */}
           <div className="flex flex-wrap justify-center items-center gap-8 mb-10">
             <div className="flex items-center text-luxury-cream/80">
-              <Star className="h-5 w-5 text-luxury-gold mr-2" />
-              <span className="text-lg">5.0 Rating</span>
+              <MapPin className="h-5 w-5 text-luxury-gold mr-2" />
+              <span className="text-lg">Now in Yorkton!</span>
+            </div>
+            <div className="flex items-center text-luxury-cream/80">
+              <MessageCircle className="h-5 w-5 text-luxury-gold mr-2" />
+              <span className="text-lg">Accepting New Clients</span>
             </div>
             <div className="flex items-center text-luxury-cream/80">
               <Heart className="h-5 w-5 text-luxury-gold mr-2" />
-              <span className="text-lg">500+ Happy Pets</span>
-            </div>
-            <div className="flex items-center text-luxury-cream/80">
-              <Award className="h-5 w-5 text-luxury-gold mr-2" />
-              <span className="text-lg">Certified Professionals</span>
+              <span className="text-lg">Calm & Safe Experience</span>
             </div>
           </div>
 
@@ -65,8 +65,13 @@ const HeroSection = () => {
               variant="outline" 
               className="border-luxury-cream text-luxury-cream hover:bg-luxury-cream hover:text-luxury-navy px-8 py-4 text-lg font-semibold transform hover:scale-105 transition-all duration-300"
             >
-              View Services
+              Call (306) 621-0985
             </Button>
+          </div>
+
+          {/* Special Note */}
+          <div className="mt-8 text-luxury-cream/70 text-lg">
+            <p>Whether your pup is shy, energetic, or needs extra care - we ensure every visit is positive!</p>
           </div>
         </div>
       </div>

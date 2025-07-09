@@ -5,52 +5,34 @@ import { Star, Quote } from 'lucide-react';
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      location: "Beverly Hills",
-      rating: 5,
-      comment: "Absolutely exceptional service! My Golden Retriever, Max, has never looked better. The staff is incredibly professional and caring. The spa atmosphere makes both pets and owners feel relaxed and pampered.",
-      petName: "Max",
-      service: "Royal Full Service"
+      name: "Brianna G.",
+      comment: "We brought our 3 dogs—2 energetic and 1 VERY timid—to Wizard of Paws… The service was incredible, and I'm excited to return in the future!",
+      rating: 5
     },
     {
-      name: "Michael Chen",
-      location: "Manhattan",
-      rating: 5,
-      comment: "I've tried many groomers, but Luxe Paws is in a league of their own. The attention to detail is remarkable, and my Poodle Princess always comes home looking like she stepped out of a magazine.",
-      petName: "Princess",
-      service: "Signature Styling"
+      name: "Brenda",
+      comment: "Excellent grooming! Beautiful cut. Thank you for your patience with my spicy Shih Tzu.",
+      rating: 5
     },
     {
-      name: "Emma Rodriguez",
-      location: "Malibu",
-      rating: 5,
-      comment: "The luxury spa package was incredible! My elderly Labrador, Charlie, has mobility issues, and they handled him with such gentle care. The therapeutic treatments have actually improved his comfort level.",
-      petName: "Charlie",
-      service: "Senior Pet Care"
+      name: "M.R.",
+      comment: "Absolutely incredible work — my boy looked better than ever. Very happy dog and dog mom!",
+      rating: 5
     },
     {
-      name: "David Thompson",
-      location: "Newport Beach",
-      rating: 5,
-      comment: "From the moment we walked in, I knew this was special. The facility is immaculate, the staff is knowledgeable, and my nervous rescue dog was treated with such patience and love.",
-      petName: "Luna",
-      service: "Luxury Spa Package"
+      name: "Tracy T.",
+      comment: "Pomeranian with matted hair looked amazing… Yorkton was needing this.",
+      rating: 5
     },
     {
-      name: "Jennifer Walsh",
-      location: "Santa Monica",
-      rating: 5,
-      comment: "Worth every penny! The royal treatment my Yorkie received was amazing. They even sent photos during the grooming process so I could see how happy and relaxed she was.",
-      petName: "Bella",
-      service: "Royal Full Service"
+      name: "Cindy O.",
+      comment: "My experience was phenomenal… thank you from the bottom of our hearts for taking such good care of a beloved family member.",
+      rating: 5
     },
     {
-      name: "Robert Kim",
-      location: "Pacific Palisades",
-      rating: 5,
-      comment: "Luxe Paws transformed my scruffy rescue into a show dog! The before and after photos are incredible. The team's expertise and genuine love for animals really shows in their work.",
-      petName: "Rocky",
-      service: "Signature Styling"
+      name: "Sarah M.",
+      comment: "Finally found a groomer who understands my dog's anxiety. The team was so patient and gentle. Highly recommend!",
+      rating: 5
     }
   ];
 
@@ -60,10 +42,10 @@ const TestimonialsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-playfair font-bold text-luxury-navy mb-6">
-            What Our Clients Say
+            What Our Clients Are Saying
           </h2>
           <p className="text-xl text-luxury-navy/70 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what pet parents in our community have to say about their Luxe Paws experience.
+            Don't just take our word for it. Here's what pet parents in Yorkton and surrounding areas have to say about their Wizard of Paws experience.
           </p>
           
           {/* Overall Rating */}
@@ -74,7 +56,7 @@ const TestimonialsSection = () => {
               ))}
             </div>
             <span className="text-2xl font-bold text-luxury-navy ml-4">5.0</span>
-            <span className="text-luxury-navy/60">out of 5 stars</span>
+            <span className="text-luxury-navy/60">from happy pet parents</span>
           </div>
         </div>
 
@@ -106,24 +88,12 @@ const TestimonialsSection = () => {
 
                 {/* Client Info */}
                 <div className="border-t border-luxury-champagne pt-4">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <h4 className="font-semibold text-luxury-navy">
-                        {testimonial.name}
-                      </h4>
-                      <p className="text-sm text-luxury-navy/60">
-                        {testimonial.location}
-                      </p>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-sm font-medium text-luxury-gold">
-                        {testimonial.petName}
-                      </div>
-                      <div className="text-xs text-luxury-navy/60">
-                        {testimonial.service}
-                      </div>
-                    </div>
-                  </div>
+                  <h4 className="font-semibold text-luxury-navy">
+                    {testimonial.name}
+                  </h4>
+                  <p className="text-sm text-luxury-navy/60">
+                    Verified Customer
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -134,17 +104,17 @@ const TestimonialsSection = () => {
         <div className="text-center mt-16">
           <div className="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
             <h3 className="text-2xl font-playfair font-bold text-luxury-navy mb-4">
-              Ready to Give Your Pet the Luxury Experience?
+              Ready to Give Your Pet the Care They Deserve?
             </h3>
             <p className="text-luxury-navy/70 mb-6">
-              Join hundreds of satisfied pet parents who trust Luxe Paws with their beloved companions.
+              Join the growing number of satisfied pet parents in Yorkton who trust Wizard of Paws with their beloved companions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-luxury-gold hover:bg-luxury-bronze text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
                 Book Your Appointment
               </button>
               <button className="border border-luxury-navy text-luxury-navy hover:bg-luxury-navy hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
-                Call (555) 123-4567
+                Call (306) 621-0985
               </button>
             </div>
           </div>

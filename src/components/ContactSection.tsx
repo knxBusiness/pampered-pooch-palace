@@ -3,32 +3,32 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { MapPin, Phone, Mail, Clock, Star } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram, AlertTriangle } from 'lucide-react';
 
 const ContactSection = () => {
   const contactInfo = [
     {
       icon: MapPin,
       title: "Visit Our Salon",
-      details: ["123 Luxury Lane", "Beverly Hills, CA 90210"],
+      details: ["Yorkton, Saskatchewan", "New location now open!"],
       action: "Get Directions"
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: ["(555) 123-4567", "Available 7 days a week"],
+      details: ["(306) 621-0985", "By appointment only"],
       action: "Call Now"
     },
     {
       icon: Mail,
-      title: "Email Us",
-      details: ["hello@luxepaws.com", "We respond within 2 hours"],
-      action: "Send Email"
+      title: "Social Media",
+      details: ["Message us on Facebook", "Follow us on Instagram"],
+      action: "Connect"
     },
     {
       icon: Clock,
       title: "Business Hours",
-      details: ["Mon-Fri: 8am-7pm", "Sat-Sun: 9am-6pm"],
+      details: ["Monday - Friday", "8:00 AM - 5:00 PM"],
       action: "Book Online"
     }
   ];
@@ -39,10 +39,10 @@ const ContactSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-playfair font-bold text-luxury-navy mb-6">
-            Get in Touch
+            Book an Appointment
           </h2>
           <p className="text-xl text-luxury-navy/70 max-w-3xl mx-auto">
-            Ready to pamper your pet? Contact us today to schedule an appointment or learn more about our luxury grooming services.
+            We're currently accepting new clients! Contact us to check availability or request a quote for your furry family member.
           </p>
         </div>
 
@@ -52,10 +52,10 @@ const ContactSection = () => {
             <Card className="border-0 shadow-2xl">
               <CardHeader>
                 <CardTitle className="text-2xl font-playfair text-luxury-navy">
-                  Schedule Your Appointment
+                  Schedule Your Pet's Appointment
                 </CardTitle>
                 <p className="text-luxury-navy/60">
-                  Fill out the form below and we'll get back to you within 2 hours to confirm your booking.
+                  Fill out the form below and we'll get back to you to confirm your booking.
                 </p>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -74,7 +74,7 @@ const ContactSection = () => {
                       Phone Number *
                     </label>
                     <Input 
-                      placeholder="(555) 123-4567"
+                      placeholder="(306) 621-0985"
                       className="border-luxury-champagne focus:border-luxury-gold"
                     />
                   </div>
@@ -82,7 +82,7 @@ const ContactSection = () => {
 
                 <div>
                   <label className="block text-sm font-medium text-luxury-navy mb-2">
-                    Email Address *
+                    Email Address
                   </label>
                   <Input 
                     type="email"
@@ -94,7 +94,7 @@ const ContactSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-luxury-navy mb-2">
-                      Pet's Name
+                      Pet's Name *
                     </label>
                     <Input 
                       placeholder="Your pet's name"
@@ -114,25 +114,26 @@ const ContactSection = () => {
 
                 <div>
                   <label className="block text-sm font-medium text-luxury-navy mb-2">
-                    Preferred Service
+                    Service Needed
                   </label>
                   <select className="w-full p-3 border border-luxury-champagne rounded-lg focus:border-luxury-gold focus:outline-none">
                     <option>Select a service</option>
-                    <option>Royal Full Service</option>
-                    <option>Signature Styling</option>
-                    <option>Luxury Spa Package</option>
-                    <option>Express Refresh</option>
-                    <option>Puppy First Timer</option>
-                    <option>Senior Pet Care</option>
+                    <option>Bath & Brush-Out</option>
+                    <option>Full Haircut & Trim</option>
+                    <option>De-matting & Conditioning</option>
+                    <option>Breed-Specific Styling</option>
+                    <option>Puppy's First Groom</option>
+                    <option>Senior & Timid Dog Care</option>
+                    <option>Full Grooming Package</option>
                   </select>
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-luxury-navy mb-2">
-                    Special Requests or Notes
+                    Special Notes
                   </label>
                   <Textarea 
-                    placeholder="Any special requests, allergies, or behavioral notes about your pet..."
+                    placeholder="Please let us know if your dog is anxious, reactive, has special needs, or any other important information..."
                     rows={4}
                     className="border-luxury-champagne focus:border-luxury-gold"
                   />
@@ -142,11 +143,11 @@ const ContactSection = () => {
                   size="lg" 
                   className="w-full bg-luxury-gold hover:bg-luxury-bronze text-white"
                 >
-                  Schedule Appointment
+                  Request Appointment
                 </Button>
 
                 <p className="text-sm text-luxury-navy/60 text-center">
-                  * Required fields. We'll confirm your appointment within 2 hours.
+                  * Required fields. We'll contact you to confirm availability.
                 </p>
               </CardContent>
             </Card>
@@ -188,26 +189,23 @@ const ContactSection = () => {
               </Card>
             ))}
 
-            {/* Google Reviews CTA */}
+            {/* Special Care Notice */}
             <Card className="border-0 bg-luxury-navy text-white">
-              <CardContent className="p-6 text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="flex space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-6 w-6 fill-luxury-gold text-luxury-gold" />
-                    ))}
+              <CardContent className="p-6">
+                <div className="flex items-start space-x-4">
+                  <AlertTriangle className="h-6 w-6 text-luxury-gold flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="text-xl font-semibold mb-2">Important Notice</h4>
+                    <p className="text-white/80 mb-4">
+                      Please notify us in advance if your dog has special care needs (anxious, reactive, etc.) 
+                      so we can ensure a safe and private space for your pet's comfort.
+                    </p>
+                    <div className="flex space-x-4">
+                      <Facebook className="h-5 w-5 text-luxury-gold cursor-pointer hover:text-white transition-colors" />
+                      <Instagram className="h-5 w-5 text-luxury-gold cursor-pointer hover:text-white transition-colors" />
+                    </div>
                   </div>
                 </div>
-                <h4 className="text-xl font-semibold mb-2">Love Our Service?</h4>
-                <p className="text-white/80 mb-4">
-                  Share your experience and help other pet parents discover Luxe Paws.
-                </p>
-                <Button 
-                  variant="outline" 
-                  className="border-luxury-gold text-luxury-gold hover:bg-luxury-gold hover:text-white"
-                >
-                  Write a Review
-                </Button>
               </CardContent>
             </Card>
           </div>
